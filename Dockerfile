@@ -2,6 +2,7 @@ FROM node:16-alpine AS build
 WORKDIR /usr/app
 COPY . /usr/app
 RUN npm install
+CMD ["npm", "start;"]
 RUN npm run build
 
 
