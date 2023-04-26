@@ -15,7 +15,7 @@ elif [ "$GIT_BRANCH" = "origin/master" ]; then
     docker tag $IMAGE_NAME pakas142/prod:latest
     docker push pakas142/prod:latest
 	sed 's|{{IMAGE_NAME}}|${IMAGE_NAME}|' docker-compose.template.yml > docker-compose.yml
-    docker ps -a
+    docker ps
 else echo "either git pull not available in dev or master"
 fi
 
